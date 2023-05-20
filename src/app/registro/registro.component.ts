@@ -10,7 +10,7 @@ import { UsuariosService } from '../usuarios.service';
 })
 export class RegistroComponent {
   
-  user: Usuario
+  user: Usuario;
   miFormulario: FormGroup;
   contrasenasCoinciden: boolean = true;
 
