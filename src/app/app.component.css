@@ -34,6 +34,12 @@ body{
   }
 
 img {
-    height: 5.45rem;
+    height: 4rem;
     display: inline;
+    margin-right: 10.5%;
   }
+
+  .d-block{
+  height:500px
+
+}
