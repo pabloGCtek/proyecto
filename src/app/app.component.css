@@ -33,6 +33,9 @@ body{
   }
 
 img {
-    height: 5.45rem;
+    height: 4rem;
     display: inline;
   }
+.d-block{
+  height:500px
+}

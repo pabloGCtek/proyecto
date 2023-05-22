@@ -8,6 +8,11 @@ import { ContactComponent } from './contact/contact.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryService } from './gallery.service';
 import { DetallesTattoComponent } from './detalles-tatto/detalles-tatto.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
+import { UsuariosService } from './usuarios.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,12 +21,20 @@ import { DetallesTattoComponent } from './detalles-tatto/detalles-tatto.componen
     ContactComponent,
     GalleryComponent,
     DetallesTattoComponent
+    LoginComponent,
+    RegistroComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [GalleryService],
+  providers: 
+  [GalleryService],
+  [UsuariosService]
   bootstrap: [AppComponent]
 })
 export class AppModule { }
