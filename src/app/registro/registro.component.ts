@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import { Usuario } from '../clases/Usuario';
 import { UsuariosService } from '../usuarios.service';
@@ -8,13 +8,13 @@ import { UsuariosService } from '../usuarios.service';
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
-export class RegistroComponent {
-  
-  user: Usuario;
+export class RegistroComponent implements OnInit{
+  user: Usuario
   miFormulario: FormGroup;
   contrasenasCoinciden: boolean = true;
 
-  constructor(public usService: UsuariosService) {
+  constructor(private usService: UsuariosService) {
+    this.user = new Usuario();
     this.miFormulario = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
@@ -42,8 +42,8 @@ export class RegistroComponent {
   }
   //obtencion de la fecha actual
   fecha_actual:string = new Date().toISOString().split('T')[0];
-  fecha_nacimiento:Date;
-  edad: number;
+  fecha_nacimiento:Date = new Date();
+  edad: number = 0;
   esMenor:boolean=false;
   ngOnInit(){}
 
@@ -53,7 +53,9 @@ export class RegistroComponent {
     this.user.contrasena = this.miFormulario.get('password')?.value
     this.user.nombre = this.miFormulario.get('usuario')?.value
     this.user.fecha_nacimiento = new Date(this.fecha_nacimiento)
-    //this.usService.insert(this.user).subscribe(u => console.log(u))
+    console.log("Hola")
+    alert("Hola")
+    this.usService.insert(this.user).subscribe(u => console.log(u))
   }
   calcularEdad(){
     const fechaNacimiento = new Date(this.fecha_nacimiento);
