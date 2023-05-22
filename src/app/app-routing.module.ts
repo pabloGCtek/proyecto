@@ -11,7 +11,8 @@ const routes: Routes = [
   {path: 'gallery', component: GalleryComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'login', component: LoginComponent},
-  {path:'registro', component: RegistroComponent}
+  {path:'registro', component: RegistroComponent},
+  {path:'tatto/:id', component:DetallesTattoComponent}
 ];
 
 @NgModule({
