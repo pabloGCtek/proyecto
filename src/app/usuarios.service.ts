@@ -7,11 +7,11 @@ import { Usuario } from './clases/Usuario';
   providedIn: 'root'
 })
 export class UsuariosService {
-  // private url:String = "http://localhost:8080/usuarios"
+  private url:String = "http://localhost:8080/usuarios"
 
-  // constructor(private httpC:HttpClient) { }
+  constructor(private httpC:HttpClient) { }
 
-  // insert(user:Usuario):Observable<Object>{
-  //   return this.httpC.post(`${this.url}/insertar`,user)
-  // }
+  insert(user:Usuario):Observable<Object>{
+    return this.httpC.post(`${this.url}/insertar`,user)
+  }
 }
