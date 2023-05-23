@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { DetallesTattoComponent } from './detalles-tatto/detalles-tatto.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},

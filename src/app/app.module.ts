@@ -13,6 +13,8 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { UsuariosService } from './usuarios.service';
 import { HttpClientModule } from '@angular/common/http';
+import { Artistas2Component } from './artistas2/artistas2.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,11 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ContactComponent,
     GalleryComponent,
-    DetallesTattoComponent
+    DetallesTattoComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    Artistas2Component,
+    CarouselComponent
 
   ],
   imports: [
@@ -33,8 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: 
-  [GalleryService],
-  [UsuariosService]
+  [GalleryService,UsuariosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
